@@ -1,0 +1,20 @@
+/*
+adding the map as background of the first part
+*/
+div[class="col-md-6"]:nth-child(1){
+    background: url(../img/trajectoire.PNG) no-repeat;
+    height: 100%;
+}
+
+/*
+adding some style to be able to struct the table
+*/
+table{
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+}
+td, th {
+    border: 1px solid black;
+    text-align: center;
+}

@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <!-- adding bootstrap for small design arrangement -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <!-- adding custom css style -->
+        <link rel="stylesheet" href="assets/css/main.css">
+        <!-- adding turf.js using CDN -->
+        <script src='https://npmcdn.com/@turf/turf/turf.min.js'></script>
+    </head>
+
+    <body>
+
+        <div>
+            <!-- devide secreen into two part the 1st for showing map with the tow 
+                trajectories and the second part for showing the result -->
+
+            <!-- this is the first part where the baground contain the map -->
+            <div class="col-md-6">
+            </div>
+
+            <!-- this is the second part contain several informations and showing the result -->
+            <div class="col-md-6">
+
+                <!-- showing number of dots in the reference trajectory -->
+                <div>
+                    <h2 style="color: green;">Trajectoire de référence :</h2>
+                    <p>la Trajectoire de référence est constituée de : <span id="pts_ref"></span> points.</p>
+                </div>
+                
+                <!-- showing number of dots in the evalution trajectory -->
+                <div>
+                    <h2 style="color: red;">Trajectoire d'évaluation :</h2>
+                    <p>la Trajectoire d'évaluation est constituée de : <span id="pts_eval"></span> points.</p>
+                </div>
+
+                <!-- showing the result in a table where we find : 
+                            1)  N° of dots
+                            2)  Coordinates [longitude, latitude]
+                            3)  The shortest distance (Km) -->
+                <div>
+                    <table>
+                        <caption>Résultat de l'estimation d’erreur : </caption>
+                             
+                        <thead>
+                            <tr>
+                                <th>N° point</th>
+                                <th>Coordonnées [longitude,latitude]</th>
+                                <th>La distance d la plus courte (Km)</th>
+                            </tr>
+                        </thead>
+
+                        <tfoot>
+                            <tr>
+                                <th>N° point</th>
+                                <th>Coordonnées [longitude,latitude]</th>
+                                <th>La distance d la plus courte (Km)</th>
+                            </tr>
+                        </tfoot>
+                        
+                        <!-- Update automatically body's table -->
+                        <tbody id="t_body">
+                            
+                        </tbody>
+                    </table>
+                </div>
+
+                
+            </div>
+        </div>
+
+        
+
+        <!-- including data.js that contain GeoJSON data -->
+        <script src="assets/js/data.js"></script>
+        <!-- including trajectoriesComparison.js that contain function that calculat the shortest distance -->
+        <script src="assets/js/trajectoriesComparison.js"></script>
+        <!-- including domUpdate.js to ubdate informations and result in index.html -->
+        <script src="assets/js/domUpdate.js"></script>
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </body>
+</html>

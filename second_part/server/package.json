@@ -1,0 +1,12 @@
+{
+  "name": "second_part",
+  "private": true,
+  "dependencies": {
+    "@vertx/web-api-contract": "^3.5.3",
+    "turf": "^3.0.14",
+    "vertx3-full": "3.5.3"
+  },
+  "scripts": {
+    "start": ".\\node_modules\\vertx3-full\\vertx\\bin\\vertx.bat run server.js -Dvertx.options.blockedThreadCheckInterval=200000000"
+  }
+}

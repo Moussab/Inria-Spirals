@@ -1,0 +1,12 @@
+/*
+adding some style to be able to struct the table
+*/
+table{
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+}
+td, th {
+  border: 1px solid black;
+  text-align: center;
+}

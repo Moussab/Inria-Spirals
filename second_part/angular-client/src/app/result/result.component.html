@@ -1,0 +1,29 @@
+<div>
+  <table>
+    <caption>Résultat de l'estimation d’erreur : </caption>
+
+    <thead>
+    <tr>
+      <th>N° point</th>
+      <th>Coordinées [longitude,latitude]</th>
+      <th>La distance d la plus courte (Km)</th>
+    </tr>
+    </thead>
+
+    <tfoot>
+    <tr>
+      <th>N° point</th>
+      <th>Coordinées [longitude,latitude]</th>
+      <th>La distance d la plus courte (Km)</th>
+    </tr>
+    </tfoot>
+
+    <tbody>
+    <tr *ngFor="let eval_coordinate of result.eval_coordinates; let i = index">
+      <td>{{(i+1)}}</td>
+      <td>[ {{eval_coordinate}} ]</td>
+      <td>{{result.estimation_of_error[i]}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
